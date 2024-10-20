@@ -33,9 +33,9 @@ POST /api/rules
 ### Creates a new rule in the database.
 
 #### Request Body:
-{
+'{
     "rule_string": "((age > 30 AND department = 'Sales') OR (age < 25 AND department = 'Marketing'))"
-}
+}'
 2. Delete Rule
 DELETE /api/rules/<rule_id>
 
