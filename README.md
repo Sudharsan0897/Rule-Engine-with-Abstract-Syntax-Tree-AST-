@@ -26,14 +26,13 @@ left: Reference to the left child node.
 right: Reference to the right child node.
 value: Optional value for operand nodes (e.g., comparison values).
 API Endpoints
+
 1. Create Rule
 POST /api/rules
 
 ### Creates a new rule in the database.
 
-Request Body:
-json
-Copy code
+#### Request Body:
 {
     "rule_string": "((age > 30 AND department = 'Sales') OR (age < 25 AND department = 'Marketing'))"
 }
@@ -47,9 +46,7 @@ POST /api/rules/evaluate
 
 Evaluates the combined rules against user data.
 
-Request Body:
-json
-Copy code
+#### Request Body:
 {
     "user_data": {
         "age": 35,
@@ -60,38 +57,26 @@ Copy code
 }
 Sample Rules
 Rule 1:
-
-java
-Copy code
 ((age > 30 AND department = 'Sales') OR (age < 25 AND department = 'Marketing')) AND (salary > 50000 OR experience > 5)
+
 Rule 2:
-
-java
-Copy code
 ((age > 30 AND department = 'Marketing')) AND (salary > 20000 OR experience > 5)
-Setup Instructions
+
+### Setup Instructions
 Clone the Repository:
+git clone <github.com/Sudharsan0897>
 
-bash
-Copy code
-git clone <repository-url>
-Install Dependencies:
-
-bash
-Copy code
+#### Install Dependencies:
 pip install -r requirements.txt
-Configure Database: Update the database URI in the code to connect to your MySQL database.
 
-Run Migrations: Ensure the database schema is created.
+#### Configure Database:
+Update the database URI in the code to connect to your MySQL database.
 
-python
-Copy code
+#### Run Migrations: Ensure the database schema is created.
 with app.app_context():
     db.create_all()
-Start the Application:
-
-bash
-Copy code
+    
+#### Start the Application:
 python main.py
 
 ### Conclusion
