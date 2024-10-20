@@ -63,20 +63,20 @@ Rule 2:
 
 ### Setup Instructions
 Clone the Repository:
-git clone <github.com/Sudharsan0897>
+`git clone <github.com/Sudharsan0897>`
 
 #### Install Dependencies:
-pip install -r requirements.txt
+`pip install -r requirements.txt`
 
 #### Configure Database:
 Update the database URI in the code to connect to your MySQL database.
 
 #### Run Migrations: Ensure the database schema is created.
-with app.app_context():
-    db.create_all()
+`with app.app_context():
+    db.create_all()`
     
 #### Start the Application:
-python main.py
+`python main.py`
 
 ### Conclusion
 The Rule Engine application serves as a powerful tool for dynamically evaluating user eligibility based on complex, user-defined rules. By leveraging Abstract Syntax Trees (AST), it allows for intuitive rule creation and evaluation, making it suitable for various applications where eligibility criteria need to be established.
