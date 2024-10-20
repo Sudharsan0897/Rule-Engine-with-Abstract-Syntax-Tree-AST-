@@ -33,34 +33,33 @@ POST /api/rules
 ### Creates a new rule in the database.
 
 #### Request Body:
-'{
+`{
     "rule_string": "((age > 30 AND department = 'Sales') OR (age < 25 AND department = 'Marketing'))"
-}'
+}`
+
 2. Delete Rule
 DELETE /api/rules/<rule_id>
-
 Deletes a specified rule from the database.
 
 3. Evaluate Rules
 POST /api/rules/evaluate
-
 Evaluates the combined rules against user data.
 
 #### Request Body:
-{
+`{
     "user_data": {
         "age": 35,
         "department": "Sales",
         "salary": 60000,
         "experience": 3
     }
-}
+}`
 Sample Rules
 Rule 1:
-((age > 30 AND department = 'Sales') OR (age < 25 AND department = 'Marketing')) AND (salary > 50000 OR experience > 5)
+`((age > 30 AND department = 'Sales') OR (age < 25 AND department = 'Marketing')) AND (salary > 50000 OR experience > 5)`
 
 Rule 2:
-((age > 30 AND department = 'Marketing')) AND (salary > 20000 OR experience > 5)
+`((age > 30 AND department = 'Marketing')) AND (salary > 20000 OR experience > 5)`
 
 ### Setup Instructions
 Clone the Repository:
