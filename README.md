@@ -14,13 +14,13 @@ Error Handling: The application includes mechanisms for handling invalid rule st
 Architecture
 The application follows a 3-tier architecture comprising:
 
-####Presentation Layer: A simple user interface for rule creation and evaluation.
+#### Presentation Layer: A simple user interface for rule creation and evaluation.
 API Layer: RESTful APIs to handle rule management (create, delete, evaluate) and interaction with the frontend.
 Data Layer: SQL database for storing rules and metadata.
 Data Structure
 The core data structure for the AST is defined as follows:
 
-####Node Class: Represents each node in the AST with the following attributes:
+#### Node Class: Represents each node in the AST with the following attributes:
 node_type: Indicates if the node is an "operator" (AND/OR) or an "operand" (conditions).
 left: Reference to the left child node.
 right: Reference to the right child node.
